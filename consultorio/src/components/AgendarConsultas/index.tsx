@@ -49,9 +49,10 @@ export default function AgendarConsultas(){
                      value={data}
                      onChange={(e)=> setData(e.target.value)}
                 />
-                <Select>
+                <Select value={time} 
+                    onChange={(e)=> setTime(e.target.value)}>
                     {horarios.map((hora, index)=> (
-                        <MenuItem>
+                        <MenuItem key={index} value={time}>
                             {hora} 
                         </MenuItem>
                     ))}
